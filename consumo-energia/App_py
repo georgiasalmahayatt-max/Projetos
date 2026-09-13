@@ -1,0 +1,17 @@
+print("🔌 Calculadora de Consumo Elétrico Inteligente\n")
+
+aparelho = "Geladeira Frost Free Brastemp"
+potencia = float(70)
+horas_dia = float(24)
+
+# Fórmula: (potência * horasDia * 30) / 1000
+consumo_mensal = (potencia * horas_dia * 30) / 1000
+
+# Cálculo opcional de custo
+valor_kwh = 0.75
+custo_estimado = consumo_mensal * valor_kwh
+
+print("\n📊 Resultado:")
+print(f"Aparelho: {aparelho}")
+print(f"Consumo estimado: {consumo_mensal:.2f} kWh/mês")
+print(f"Custo estimado: R$ {custo_estimado:.2f}/mês")
