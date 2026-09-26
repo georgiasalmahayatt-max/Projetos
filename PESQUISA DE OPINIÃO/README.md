@@ -4,75 +4,96 @@
 
 Este projeto foi desenvolvido em **Python** com o objetivo de realizar uma pesquisa de opinião sobre o atendimento prestado pela empresa **TudoWeb**.
 
-O programa coleta os dados dos entrevistados e registra a avaliação do atendimento, permitindo contabilizar ao final da pesquisa a quantidade de respostas **EXCELENTE** e **RUIM**.
+O programa coleta informações dos entrevistados e registra a avaliação do atendimento, permitindo contabilizar, ao final da pesquisa, a quantidade de respostas **EXCELENTE** e **RUIM**.
 
 ---
 
 ## 🎯 Objetivo
 
-Desenvolver um programa utilizando **estruturas de repetição** e **estruturas de decisão** para coletar e analisar as respostas de uma pesquisa de satisfação.
+Desenvolver um programa utilizando **estrutura de repetição** e **estruturas de decisão** para coletar e analisar as respostas de uma pesquisa de satisfação.
 
-Cada entrevistado deve informar:
+Para cada entrevistado, o programa solicita:
 
-* 👤 Nome
-* 🎂 Idade
-* ⭐ Opinião sobre o atendimento
+- 👤 Nome
+- 🎂 Idade
+- ⭐ Opinião sobre o atendimento
 
-As opções disponíveis são:
+As opções de avaliação são:
 
-* `1` — EXCELENTE
-* `2` — BOM
-* `3` — RUIM
+- `1` — EXCELENTE
+- `2` — BOM
+- `3` — RUIM
+
+A pesquisa definitiva deve ser realizada com **50 entrevistados**.
 
 ---
 
-## 🔄 Funcionamento
+## 🔄 Funcionamento do programa
 
 O programa utiliza a estrutura de repetição `for` para realizar a pesquisa com os entrevistados.
 
-Para verificar cada resposta, são utilizadas as estruturas condicionais:
-
-* `if`
-* `elif`
-* `else`
+As estruturas condicionais `if`, `elif` e `else` são utilizadas para verificar a opinião informada por cada participante.
 
 Ao final da pesquisa, o programa apresenta:
 
-* Quantidade de respostas **EXCELENTE**
-* Quantidade de respostas **RUIM**
+- Quantidade de respostas **EXCELENTE**
+- Quantidade de respostas **RUIM**
 
 ---
 
-## 🧪 Teste do programa
+## 🧪 Teste de validação
 
-Para validar o funcionamento do programa, foram realizados testes considerando **10 entrevistados**.
+Antes da execução da pesquisa definitiva, foi realizado um teste com **10 entrevistados**, conforme solicitado na atividade.
 
-Exemplo de respostas:
+Na versão de teste, foi utilizada a seguinte estrutura:
 
-| Entrevistado | Opinião   |
-| ------------ | --------- |
-| 1            | EXCELENTE |
-| 2            | BOM       |
-| 3            | EXCELENTE |
-| 4            | RUIM      |
-| 5            | BOM       |
-| 6            | EXCELENTE |
-| 7            | BOM       |
-| 8            | RUIM      |
-| 9            | EXCELENTE |
-| 10           | BOM       |
-
-### 📌 Resultado esperado
-
-```text
-=== RESULTADO DA PESQUISA ===
-Quantidade de respostas EXCELENTE: 4
-Quantidade de respostas RUIM: 2
+```python
+for entrevistado in range(1, 11):
 ```
 
+O teste permitiu verificar o funcionamento da estrutura de repetição, a entrada dos dados dos entrevistados, a classificação das opiniões e a contabilização dos resultados.
+
 ---
 
-## 💻 Código utilizado
+## 📸 Evidências dos testes realizados
+
+Para demonstrar o funcionamento do programa, foram registradas capturas de tela durante a execução do teste com os entrevistados.
+
+### Resultado do teste 1
+
+![Resultado do teste 1](resultado_teste_1.png)
+
+### Resultado do teste 2
+
+![Resultado do teste 2](resultado_teste_2.png)
+
+### Resultado do teste 3
+
+![Resultado do teste 3](resultado_teste_3.png)
+
+### Resultado do teste 4
+
+![Resultado do teste 4](resultado_teste_4.png)
+
+As imagens acima registram a execução do programa e servem como evidência da realização dos testes de validação.
+
+---
+
+## 👥 Pesquisa definitiva
+
+Após a validação com 10 entrevistados, a versão definitiva foi configurada para realizar a pesquisa com **50 entrevistados**.
+
+Para isso, a estrutura de repetição utiliza:
+
+```python
+for entrevistado in range(1, 51):
+```
+
+Dessa forma, o programa atende ao requisito da atividade de realizar a pesquisa com 50 participantes.
+
+---
+
+## 💻 Estrutura principal do programa
 
 ```python
 excelente = 0
@@ -80,7 +101,7 @@ ruim = 0
 
 print("=== PESQUISA DE OPINIÃO - TUDOWEB ===")
 
-for entrevistado in range(1, 11):
+for entrevistado in range(1, 51):
     print(f"\nEntrevistado {entrevistado}")
 
     nome = input("Digite o nome: ")
@@ -109,23 +130,26 @@ print("Quantidade de respostas RUIM:", ruim)
 
 ---
 
-## 👥 Versão final — 50 entrevistados
+## 📂 Arquivos do projeto
 
-Após os testes com 10 entrevistados, o programa pode ser configurado para realizar a pesquisa com **50 pessoas**.
+O projeto contém os seguintes arquivos:
 
-Para isso, basta alterar:
-
-```python
-for entrevistado in range(1, 11):
+```text
+PESQUISA DE OPINIÃO/
+│
+├── pesquisa_teste.py
+├── pesquisa_definitiva.py
+├── README.md
+├── resultado_teste_1.png
+├── resultado_teste_2.png
+├── resultado_teste_3.png
+└── resultado_teste_4.png
 ```
 
-para:
-
-```python
-for entrevistado in range(1, 51):
-```
-
-Dessa forma, o programa executará a pesquisa para os **50 entrevistados**, conforme solicitado na atividade.
+- **pesquisa_teste.py** — versão utilizada para os testes com 10 entrevistados.
+- **pesquisa_definitiva.py** — versão definitiva preparada para 50 entrevistados.
+- **README.md** — documentação do projeto.
+- **resultado_teste_1.png a resultado_teste_4.png** — evidências da execução e validação do programa.
 
 ---
 
@@ -133,39 +157,34 @@ Dessa forma, o programa executará a pesquisa para os **50 entrevistados**, conf
 
 1. Tenha o **Python** instalado no computador.
 2. Abra a pasta do projeto no **Visual Studio Code**.
-3. Abra o terminal.
-4. Execute:
-
-```bash
-python app.py
-```
-
+3. Abra o arquivo Python desejado.
+4. Execute o programa.
 5. Informe o nome, a idade e a opinião de cada entrevistado.
-6. Ao finalizar a pesquisa, o resultado será apresentado na tela.
-
----
-
-## 🛠️ Tecnologias utilizadas
-
-* 🐍 Python
-* 💻 Visual Studio Code
-* 🐙 Git
-* 🌐 GitHub
+6. Ao final, o programa exibirá a quantidade de respostas **EXCELENTE** e **RUIM**.
 
 ---
 
 ## 📚 Conceitos utilizados
 
-Durante o desenvolvimento foram utilizados os seguintes conceitos:
+Neste projeto foram aplicados os seguintes conceitos de programação:
 
-* Variáveis
-* Entrada de dados com `input()`
-* Conversão de dados com `int()`
-* Estrutura de repetição `for`
-* Estruturas condicionais `if`, `elif` e `else`
-* Contadores
-* Operadores de comparação
-* Saída de dados com `print()`
+- Variáveis
+- Entrada de dados com `input()`
+- Conversão de dados com `int()`
+- Estrutura de repetição `for`
+- Estruturas condicionais `if`, `elif` e `else`
+- Contadores
+- Operadores de comparação
+- Saída de dados com `print()`
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- 🐍 Python
+- 💻 Visual Studio Code
+- 🐙 Git
+- 🌐 GitHub
 
 ---
 
